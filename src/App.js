@@ -9,7 +9,7 @@ export default function BasicExample() {
     <Router>
       <div>
         <Navigation />
-        <ul className="fix d-none">
+        {/* <ul className="fix d-none">
           <li>
             <Link to="/">Home</Link>
           </li>
@@ -19,7 +19,7 @@ export default function BasicExample() {
           <li>
             <Link to="/dashboard">Dashboard</Link>
           </li>
-        </ul>
+        </ul> */}
         {/*
           A <Switch> looks through all its children <Route>
           elements and renders the first one whose path
@@ -28,7 +28,7 @@ export default function BasicExample() {
           of them to render at a time
         */}
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/home">
             <Home />
           </Route>
           <Route path="/prehome">
