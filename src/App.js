@@ -1,17 +1,17 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Navigation from "./components/Navigation";
+import Loader from "./views/Loader";
+import Home from "./views/Home";
 
 export default function BasicExample() {
   return (
     <Router>
       <div>
         <Navigation />
-        <ul className="fix">
+        <ul className="fix d-none">
           <li>
-            <Link to="/" className="title-hello">
-              Home
-            </Link>
+            <Link to="/">Home</Link>
           </li>
           <li>
             <Link to="/about">About</Link>
@@ -20,9 +20,6 @@ export default function BasicExample() {
             <Link to="/dashboard">Dashboard</Link>
           </li>
         </ul>
-
-        <hr />
-
         {/*
           A <Switch> looks through all its children <Route>
           elements and renders the first one whose path
@@ -34,41 +31,12 @@ export default function BasicExample() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/about">
-            <About />
+          <Route path="/prehome">
+            <Loader />
           </Route>
-          <Route path="/dashboard">
-            <Dashboard />
-          </Route>
+          <Route path="/dashboard"></Route>
         </Switch>
       </div>
     </Router>
-  );
-}
-
-// You can think of these components as "pages"
-// in your app.
-
-function Home() {
-  return (
-    <div>
-      <h2>Home</h2>
-    </div>
-  );
-}
-
-function About() {
-  return (
-    <div>
-      <h2>About</h2>
-    </div>
-  );
-}
-
-function Dashboard() {
-  return (
-    <div>
-      <h2>Dashboard</h2>
-    </div>
   );
 }
