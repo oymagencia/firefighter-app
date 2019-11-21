@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+/src/assets/video/firefighters.mp4
 
 # testing
 /coverage

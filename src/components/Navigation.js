@@ -1,11 +1,5 @@
 import React, { Component } from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  Location
-} from "react-router-dom";
+import { Redirect, Route, Switch } from "react-router";
 class Navigation extends Component {
   render() {
     return (
@@ -36,7 +30,7 @@ class Navigation extends Component {
                 </Link>
               </li>
               <li className="nav-item">
-                {/* <Link
+                { <Link
                   to={{
                     pathname: `${Location.pathname}`,
                     hash: "#myModal"
@@ -46,7 +40,7 @@ class Navigation extends Component {
                 >
                   Iniciativa
                 </Link>
-                <Link to={location.pat} /> */}
+                <Link to={location.pat} /> }
 
                 <a data-toggle="modal" href="#myModal" class="nav-link">
                   Iniciativa
