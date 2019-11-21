@@ -1,0 +1,73 @@
+.form {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  &__box {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../assets/img/bg-home.jpg") center center / cover no-repeat fixed;
+    &--mask {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+      height: 100vh;
+      button {
+        background-color: transparent;
+        outline: 0;
+        box-shadow: none;
+        &:hover {
+          background-color: transparent;
+          outline: 0;
+          box-shadow: none;
+        }
+        &:focus {
+          background-color: transparent;
+          outline: 0;
+          box-shadow: none;
+        }
+        img {
+          outline: 0;
+        }
+      }
+      form {
+        input {
+          background-color: transparent;
+          border-radius: 0;
+          border: 0;
+          outline: 0;
+          box-shadow: none;
+          background-image: url("../assets/img/line-form.png");
+          background-repeat: no-repeat;
+          background-position: bottom;
+          padding-bottom: 2px;
+          background-size: contain;
+          color: $color-input !important;
+          &:hover {
+            background-color: transparent;
+            border-radius: 0;
+            border: 0;
+            outline: 0;
+            box-shadow: none;
+          }
+          &:focus {
+            background-color: transparent;
+            border-radius: 0;
+            border: 0;
+            outline: 0;
+            box-shadow: none;
+          }
+          &::placeholder {
+            color: $color-placeholder;
+            font-size: 16px;
+            @include respond-to(xs) {
+            }
+          }
+        }
+      }
+    }
+  }
+}

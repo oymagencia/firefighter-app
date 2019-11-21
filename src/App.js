@@ -1,14 +1,25 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  Redirect
+} from "react-router-dom";
 import Navigation from "./components/Navigation";
+import Modal from "./components/ Initiative";
 import Loader from "./views/Loader";
 import Home from "./views/Home";
+import Form from "./views/Form";
 
 export default function BasicExample() {
   return (
     <Router>
       <div>
+        {Location.pathname !== "/preload" ? "" : <Navigation />}
+        <Redirect from="/" to="/preload" />
         <Navigation />
+
         {/* <ul className="fix d-none">
           <li>
             <Link to="/">Home</Link>
@@ -28,14 +39,17 @@ export default function BasicExample() {
           of them to render at a time
         */}
         <Switch>
+          <Route path="/preload">
+            <Loader />
+          </Route>
           <Route exact path="/home">
             <Home />
           </Route>
-          <Route path="/prehome">
-            <Loader />
+          <Route exact path="/form">
+            <Form />
           </Route>
-          <Route path="/dashboard"></Route>
         </Switch>
+        <Modal />
       </div>
     </Router>
   );

@@ -1,6 +1,11 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  Location
+} from "react-router-dom";
 class Navigation extends Component {
   render() {
     return (
@@ -31,14 +36,21 @@ class Navigation extends Component {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/initiative" className="nav-link">
+                {/* <Link
+                  to={{
+                    pathname: `${Location.pathname}`,
+                    hash: "#myModal"
+                  }}
+                  className="nav-link"
+                  data-toggle="modal"
+                >
                   Iniciativa
                 </Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/partner" className="nav-link">
-                  Hazte socio
-                </Link>
+                <Link to={location.pat} /> */}
+
+                <a data-toggle="modal" href="#myModal" class="nav-link">
+                  Iniciativa
+                </a>
               </li>
             </ul>
           </div>
