@@ -7,7 +7,8 @@ import {
   Redirect
 } from "react-router-dom";
 import Navigation from "./components/Navigation";
-import Modal from "./components/ Initiative";
+import Initiative from "./components/Initiative";
+import Credit from "./components/Credits";
 import Loader from "./views/Loader";
 import Home from "./views/Home";
 import Form from "./views/Form";
@@ -49,7 +50,8 @@ export default function BasicExample() {
             <Form />
           </Route>
         </Switch>
-        <Modal />
+        <Initiative />
+        <Credit />
       </div>
     </Router>
   );

@@ -1,0 +1,43 @@
+.credits {
+  &__box {
+    min-width: 100%;
+    margin: 0;
+    &--content {
+      min-height: 100vh;
+      background: linear-gradient(
+          rgba(255, 255, 255, 0),
+          rgba(255, 255, 255, 0)
+        ),
+        url("../assets/img/bg-initiative.jpg") center center / cover no-repeat
+          fixed !important;
+      &--header {
+        border: 0;
+        justify-content: flex-end;
+        .close {
+          width: auto;
+          display: block;
+          outline: 0;
+          padding: 0;
+          margin: 0;
+          opacity: 1;
+          &:hover {
+            opacity: 1 !important;
+          }
+          img {
+            max-width: 25%;
+            display: block;
+            margin: 0 auto;
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
+      }
+      &--body {
+      }
+      &--footer {
+        border: 0;
+      }
+    }
+  }
+}

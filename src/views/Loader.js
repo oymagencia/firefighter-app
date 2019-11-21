@@ -8,7 +8,7 @@ class Loader extends Component {
   render() {
     return (
       <section className="loader">
-        <div class="embed-responsive embed-responsive-16by9 loader__box">
+        <div class="embed-responsive_ embed-responsive-16by9_ loader__box">
           <video autoplay="true" muted="true" id="myVideo">
             <source src={movieFirefighters} type="video/mp4" />
           </video>
