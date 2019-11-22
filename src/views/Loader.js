@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import movieFirefighters from "../assets/video/firefighters.mp4";
+import moviePosterFirefighters from "../assets/img/bg-firefighter.jpg";
 import titleLoader from "../assets/img/title-loader.png";
 import buttonLoader from "../assets/img/button-loader.jpg";
 
@@ -9,7 +10,12 @@ class Loader extends Component {
     return (
       <section className="loader">
         <div class="embed-responsive_ embed-responsive-16by9_ loader__box">
-          <video autoplay="true" muted="true" id="myVideo">
+          <video
+            autoplay="true"
+            muted="true"
+            id="myVideo"
+            poster={moviePosterFirefighters}
+          >
             <source src={movieFirefighters} type="video/mp4" />
           </video>
           <div className="loader__box--mask  d-flex align-items-center justify-content-center">
