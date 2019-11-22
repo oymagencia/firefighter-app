@@ -25,7 +25,7 @@ class Loader extends Component {
                 <div className="col-12 col-md-2 offset-5">
                   <button type="submit" class="btn mt-3">
                     <Link to="/home">
-                      <img src={buttonLoader} alt="" width="100%" />
+                      <img src={buttonLoader} alt="test" width="100%" />
                     </Link>
                   </button>
                 </div>
