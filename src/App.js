@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import Initiative from "./components/Initiative";
+import Footer from "./components/Footer";
 import Credit from "./components/Credits";
 import Loader from "./views/Loader";
 import Home from "./views/Home";
@@ -17,28 +18,8 @@ export default function BasicExample() {
   return (
     <Router>
       <div>
-        {Location.pathname !== "/preload" ? "" : <Navigation />}
         <Redirect from="/" to="/preload" />
-        <Navigation />
-
-        {/* <ul className="fix d-none">
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/dashboard">Dashboard</Link>
-          </li>
-        </ul> */}
-        {/*
-          A <Switch> looks through all its children <Route>
-          elements and renders the first one whose path
-          matches the current URL. Use a <Switch> any time
-          you have multiple routes, but you want only one
-          of them to render at a time
-        */}
+        {<Navigation />}
         <Switch>
           <Route path="/preload">
             <Loader />
@@ -50,6 +31,7 @@ export default function BasicExample() {
             <Form />
           </Route>
         </Switch>
+        <Footer />
         <Initiative />
         <Credit />
       </div>

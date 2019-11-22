@@ -1,0 +1,33 @@
+.footer {
+  &__box {
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+    left: 0;
+    p {
+      font-family: $font-primary;
+      color: white;
+      text-transform: uppercase;
+      font-size: 15px;
+      span {
+        font-family: $font-primary;
+        color: white;
+        display: inline-block;
+        margin: 5px;
+      }
+      span.point {
+        font-family: $font-primary;
+        color: white;
+      }
+      a {
+        font-family: $font-primary;
+        color: white;
+        display: inline-block;
+        margin: 5px;
+      }
+      a.link-modal {
+        text-decoration: unset;
+      }
+    }
+  }
+}
